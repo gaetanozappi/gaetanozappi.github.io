@@ -30,3 +30,52 @@ background-position: right center;
 .tooltip-right {
 background-position: left center;
 }
+#main{
+    height: 100px;
+    width: 100px;
+    //background-color:#1976D2;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#main img{
+    margin: 10px 5px;
+}
+#wave,#wave2{
+    height: 100px;
+    width: 100px;
+    background-color: silver;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: -1;
+    -webkit-animation:pulseEffect 1s infinite linear;
+    -webkit-animation:pulseEffect2 1.5s infinite linear;
+}
+@-webkit-keyframes pulseEffect{
+    from{
+        transform: translate(-50%,-50%) scale(0.5);
+        opacity: 0.4;
+    }
+    to{
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes pulseEffect2{
+    from{
+        transform: translate(-50%,-50%) scale(0);
+        opacity: 0.6;
+    }
+    to{
+        transform: translate(-50%,-50%) scale(2);
+        opacity: 0;
+    }
+}
+#page{
+  display: none;
+}

@@ -25,4 +25,9 @@
     target: '#sideNav'
   });
 
+  setTimeout(()=>{
+    document.getElementById("load").style.display = "none";
+    document.getElementById("page").style.display = "block";
+  }, 4000);
+
 })(jQuery); // End of use strict
