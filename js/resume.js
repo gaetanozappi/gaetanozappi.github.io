@@ -25,7 +25,7 @@
     target: '#sideNav'
   });
 
-  setTimeout(()=>{
+  setTimeout(function(){
     document.getElementById("load").style.display = "none";
     document.getElementById("page").style.display = "block";
   }, 4000);
