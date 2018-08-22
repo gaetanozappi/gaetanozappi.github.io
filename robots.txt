@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: 
 Allow: /homepage/
 Sitemap: https://gaetanozappi.github.io/homepage/sitemap.xml
