@@ -65,7 +65,7 @@
           <a title="interests" class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
         <li class="nav-item">
-          <a title="github" class="nav-link js-scroll-trigger" href="#github">Github</a>
+          <a title="github" class="nav-link js-scroll-trigger" href="#github">Github Project <span class="npg" /></a>
         </li>
 
       </ul>
@@ -119,7 +119,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a title="github" href="#">
+              <a title="github" href="#github">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -336,7 +336,7 @@
 
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="github">
           <div class="my-auto">
-            <h2 class="mb-5">Github</h2>
+            <h2 class="mb-5">Github Project <span class="npg" /></h2>
             <table id="dtOrderExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
               <tr>
@@ -346,6 +346,7 @@
                 <th class="th-sm">Fork</th>
                 <th class="th-sm">Created</th>
                 <th class="th-sm">Pushed</th>
+                <th class="th-sm">Description</th>
               </tr>
             </thead>
             <tbody id="project">
@@ -419,26 +420,35 @@
         fetch('https://api.github.com/users/gaetanozappi/repos').then(function(response){
           return response.json();
         }).then(function(arr){
-          var t = $('#dtOrderExample').DataTable();
+          var table = $("#dtOrderExample").DataTable();
+          $('.npg').html("("+arr.length+")");
           for(var i = 0; i < arr.length; i++){
             var created_at = new Date(arr[i].created_at).toLocaleString();
             var pushed_at = new Date(arr[i].pushed_at).toLocaleString();
-            t.row.add([
+            var description = arr[i].description != null ? arr[i].description : "";
+            table.row.add([
             arr[i].name,
             arr[i].language,
             arr[i].stargazers_count,
             arr[i].forks,
             created_at,
-            pushed_at
+            pushed_at,
+            description
             ]).draw( false );
           }
         });
 
-        $(document).ready(function () {
-          $('#dtOrderExample').DataTable({
-          "order": [[ 2, "desc" ]]
+        $(document).ready(function(){
+          $("#dtOrderExample").DataTable({
+            "order": [[ 2, "desc" ]],
+            "pageLength": 100,
+            "columnDefs": [{
+            targets: 0,
+            render: function(data, type, row, meta){
+              return (type === 'display') ?  $('<a>').attr('href', "https://github.com/gaetanozappi/"+data).text(data).wrap('<div></div>').parent().html() : data;
+            }
+            }]
           });
-          $('.dataTables_length').addClass('bs-select');
         });
       </script>
 
