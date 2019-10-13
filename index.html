@@ -414,7 +414,7 @@
       </script>
 
       <script>
-        fetch('https://api.github.com/users/gaetanozappi/repos').then(function(response){
+        fetch('https://api.github.com/users/gaetanozappi/repos?per_page=1000').then(function(response){
           return response.json();
         }).then(function(arr){
           var table = $("#dtOrderExample").DataTable();
