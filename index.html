@@ -414,11 +414,12 @@
       </script>
 
       <script>
+        var table = $("#dtOrderExample").DataTable();
+        var projNumb = 0;
         fetch('https://api.github.com/users/gaetanozappi/repos?per_page=1000').then(function(response){
           return response.json();
         }).then(function(arr){
-          var table = $("#dtOrderExample").DataTable();
-          $('.npg').html("("+arr.length+")");
+          projNumb += arr.length;
           for(var i = 0; i < arr.length; i++){
             var created_at = new Date(arr[i].created_at).toLocaleString();
             var pushed_at = new Date(arr[i].pushed_at).toLocaleString();
@@ -430,11 +431,33 @@
             arr[i].forks,
             created_at,
             pushed_at,
-            description
+            description,
+            "gaetanozappi"
             ]).draw( false );
           }
         });
-
+        fetch('https://api.github.com/users/TheCaponeBrothers/repos?per_page=1000').then(function(response){
+          return response.json();
+        }).then(function(arr){
+          projNumb += arr.length;
+          for(var i = 0; i < arr.length; i++){
+            var created_at = new Date(arr[i].created_at).toLocaleString();
+            var pushed_at = new Date(arr[i].pushed_at).toLocaleString();
+            var description = arr[i].description != null ? arr[i].description : "";
+            table.row.add([
+            arr[i].name,
+            arr[i].language,
+            arr[i].stargazers_count,
+            arr[i].forks,
+            created_at,
+            pushed_at,
+            description,
+            "TheCaponeBrothers"
+            ]).draw( false );
+          }
+        });
+        
+        $('.npg').html("("+projNumb+")");
         $(document).ready(function(){
           $("#dtOrderExample").DataTable({
             "order": [[ 2, "desc" ]],
@@ -442,7 +465,7 @@
             "columnDefs": [{
             targets: 0,
             render: function(data, type, row, meta){
-              return (type === 'display') ?  $('<a>').attr('href', "https://github.com/gaetanozappi/"+data).text(data).wrap('<div></div>').parent().html() : data;
+              return (type === 'display') ?  $('<a>').attr('href', "https://github.com/"+row[7]+"/"+data).text(data).wrap('<div></div>').parent().html() : data;
             }
             }]
           });
