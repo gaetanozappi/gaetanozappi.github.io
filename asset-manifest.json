@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/homepage/static/css/main.feab315a.chunk.css",
+    "main.js": "/homepage/static/js/main.496b10c8.chunk.js",
+    "main.js.map": "/homepage/static/js/main.496b10c8.chunk.js.map",
+    "runtime-main.js": "/homepage/static/js/runtime-main.3ed86e83.js",
+    "runtime-main.js.map": "/homepage/static/js/runtime-main.3ed86e83.js.map",
+    "static/js/2.cb5f70be.chunk.js": "/homepage/static/js/2.cb5f70be.chunk.js",
+    "static/js/2.cb5f70be.chunk.js.map": "/homepage/static/js/2.cb5f70be.chunk.js.map",
+    "index.html": "/homepage/index.html",
+    "precache-manifest.b273debd02e048f91d9682e8e197dcc0.js": "/homepage/precache-manifest.b273debd02e048f91d9682e8e197dcc0.js",
+    "service-worker.js": "/homepage/service-worker.js",
+    "static/css/main.feab315a.chunk.css.map": "/homepage/static/css/main.feab315a.chunk.css.map",
+    "static/js/2.cb5f70be.chunk.js.LICENSE.txt": "/homepage/static/js/2.cb5f70be.chunk.js.LICENSE.txt",
+    "static/media/macBookPro.svg": "/homepage/static/media/macBookPro.f34b1ce0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ed86e83.js",
+    "static/js/2.cb5f70be.chunk.js",
+    "static/css/main.feab315a.chunk.css",
+    "static/js/main.496b10c8.chunk.js"
+  ]
+}
