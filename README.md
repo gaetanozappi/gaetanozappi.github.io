@@ -10,5 +10,5 @@
 [Demo](https://gaetanozappi.github.io)
 
 <img align="left" src="https://raw.githubusercontent.com/gaetanozappi/gaetanozappi.github.io/master/screen/Light.png" width="400px" heigth="200px" />
-<img align="left" src="https://raw.githubusercontent.com/gaetanozappi/gaetanozappi.github.io/master/screen/Dark.png" width="400px" heigth="200px" />
+<img align="right" src="https://raw.githubusercontent.com/gaetanozappi/gaetanozappi.github.io/master/screen/Dark.png" width="400px" heigth="200px" />
 
