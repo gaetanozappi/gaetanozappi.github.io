@@ -7,4 +7,8 @@
 [![Issue Stats](https://img.shields.io/issuestats/i/github/gaetanozappi/homepage.svg?style=flat&colorB=44cc11)](http://github.com/gaetanozappi/homepage/issues)
 [![github license](https://img.shields.io/github/license/gaetanozappi/homepage.svg)]()
 
-[Demo](https://gaetanozappi.github.io/homepage/)
+[Demo](https://gaetanozappi.github.io)
+
+<img align="left" src="https://raw.githubusercontent.com/gaetanozappi/gaetanozappi.github.io/master/screen/Light.png" width="400px" heigth="200px" />
+<img align="left" src="https://raw.githubusercontent.com/gaetanozappi/gaetanozappi.github.io/master/screen/Dark.png" width="400px" heigth="200px" />
+
